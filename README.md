@@ -10,6 +10,6 @@ Given a query, we have retrieved top 30 ranked documents out of a pre-defined in
 #### Task
 Make a argument and class based python files for all steps and test counterfactual based on new index.
 
-Last updated on : 5 Oct 2023, 6:20(IST)
+Last updated on : 8 Oct 2023, 8:50(IST)
 
 
