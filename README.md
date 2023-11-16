@@ -13,6 +13,6 @@ Work on DRMM model.....Complete CF generation and start getting results
 #### Results
 <a href="https://docs.google.com/spreadsheets/d/1Z6hoSlajNzykEAzMX3YjV4aVuEVmVMU8A_O6yKv4hwk/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1Z6hoSlajNzykEAzMX3YjV4aVuEVmVMU8A_O6yKv4hwk/edit?usp=sharing</a>
 
-Last updated on : 05 Nov 2023, 19:30(IST)
+Last updated on : 16 Nov 2023, 12:30(IST)
 
 
