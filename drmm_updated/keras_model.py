@@ -50,8 +50,6 @@ def build_keras_model():
     q_w = Reshape((query_term_maxlen,))(q_w)
 
     #
-    # combination of softmax(query term idf) and feed forward result per query term
-    #
     out_ = Dot(axes=[1, 1])([z, q_w])
 
     model = Model(inputs=[query, doc], outputs=[out_])

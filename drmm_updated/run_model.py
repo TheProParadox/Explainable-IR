@@ -7,7 +7,6 @@ from loss_function import *
 import numpy as np
 import os
 
-# make sure the argument is good (0 = the python file, 1+ the actual argument)
 
 if len(sys.argv) < 7:
     print('Needs 5 arguments-\n1. run name\n'
@@ -17,6 +16,7 @@ if len(sys.argv) < 7:
                               '5. test histogram file\n'
                               '6. reranked file path.')
     exit(0)
+
 
 run_name = sys.argv[1]
 train_file = sys.argv[2]
@@ -31,12 +31,10 @@ reranked_file_path = sys.argv[6]
 model = build_keras_model()
 model.summary()
 model.compile(loss=rank_hinge_loss, optimizer='adam')  # adam
-# plot_model(model, to_file='model.png', show_shapes=True)
-
+model.save('drmm-v0.h5')
 train_input, train_labels = get_keras_train_input(train_file, train_file_histogram)
 if not os.path.exists(reranked_file_path):
     os.makedirs(reranked_file_path)
-# c1 = ModelCheckpoint(filepath='models/temp_'+run_name+'.hdf5', verbose=1, save_best_only=False)
 model.fit(train_input, train_labels, batch_size=10, verbose=2, shuffle=False, epochs=100)  # , callbacks=[c1])
 model.save_weights(reranked_file_path + run_name + '.weights')
 
